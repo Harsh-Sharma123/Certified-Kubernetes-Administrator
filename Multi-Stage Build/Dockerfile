@@ -1,3 +1,5 @@
+# Building docker image in stages (Multi-Stage Build)
+
 FROM node:18-alpine AS installer
 WORKDIR /myapp
 COPY package*.json .

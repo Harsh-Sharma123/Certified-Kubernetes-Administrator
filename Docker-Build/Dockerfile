@@ -1,3 +1,5 @@
+# Building a Docker Image
+
 FROM node:18-alpine
 
 WORKDIR /myapp

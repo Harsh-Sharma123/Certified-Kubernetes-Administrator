@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deploy
+  labels: 
+    env: backend
+spec:
+  template:
+    metadata:
+      name: nginx-template
+      labels:
+        sample: nginx-template-sample
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:latest
+        ports:
+        - containerPort : 80
+  replicas: 4
+  selector:
+    matchLabels:
+      sample: nginx-template-sample
